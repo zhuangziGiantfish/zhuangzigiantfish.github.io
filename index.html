@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Chupei Wang — Research</title>
+  <meta name="description" content="LLM memory: proactive interference (PI), population codes, circuit analysis, and boundary-case interpretability.">
+  <meta property="og:title" content="Chupei Wang — Research">
+  <meta property="og:description" content="PI, population codes, circuit analysis, boundary cases.">
+  <meta property="og:type" content="website">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<nav aria-label="Primary">
+  <div class="nav-inner">
+    <div class="brand"><a href="index.html#top">Chupei Wang</a></div>
+    <ul role="list">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="#now">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero container" id="top">
+  <h1 class="title">Chupei Wang</h1>
+  <p class="tagline">Researcher on LLM memory & interpretability</p>
+  <p class="small">Bachelor, University of Virginia, Physics Department</p>
+  <p class="small"></p>
+  <div class="section" aria-labelledby="about">
+    <h2 id="about">About</h2>
+    <p>With a foundation in physics and philosophy—including a two‑year gap during college at the University of Chicago Divinity School (Eastern philosophy of religion)—Chupei explores where logic and mind meet their limits, probing how the edges of science and the humanities intersect. He is driven by a curiosity about where cognitive architectures—biological and artificial—break down, and what these failures teach us about intelligence. After graduation, he had a startup experience in China. Currently seeking lab and research opportunities.</p>
+    <details style="margin-top:10px">
+      <summary class="small">Seeking RA / PhD — details</summary>
+      <p class="small">I’m seeking RA positions (onsite/remote) and future PhD opportunities to study the intersection of human cognition and algorithms. After a B.S. in Physics (University of Virginia), I self‑studied philosophy of science (admitted but not enrolled to a philosophy program in the University of Bristol), and during college I took a two‑year gap at the University of Chicago Divinity School to study the philosophy of religion (mainly Eastern). Those experiences inspired me to independently initiate and fund a PI‑for‑LLMs project—recently accepted to the ICML 2025 Workshop on Long Context Foundation Models.</p>
+      <p class="small"><a href="mailto:cw4bb@virginia.edu">Email me</a> for RA inquiry / collaboration. <span class="badge">Seeking RA & PhD opportunities</span></p>
+    </details>
+
+    <details style="margin-top:10px">
+      <summary class="small">Group / Collaborators</summary>
+      <p class="small" style="margin:6px 0 10px 0">We are an interdisciplinary group probing the boundaries between human and machine intelligence.</p>
+      <ul class="clean small">
+        <li><strong>Jiaqiu Vince Sun*</strong> — PhD Candidate, NYU Center for Neuroscience. Former professional architect turned neuroscientist; integrates spatial design, cognitive neuroscience, and philosophy of mind to study how memory emerges and diverges in brains and artificial systems; focuses on higher‑level functions such as self‑monitoring and control. 📫 vince.sun@nyu.edu</li>
+        <li><strong>Chupei Wang*</strong> — Bachelor, University of Virginia (Physics). Physics + philosophy background; UChicago Divinity School (Eastern philosophy of religion, gap during college). Studies failure modes at the intersection of cognitive architectures and algorithms. 📫 cw4bb@virginia.edu</li>
+        <li><strong>Sam Zheyang Zheng</strong> — Simons Foundation Flatiron Institute (CCN) researcher and NYU PhD candidate. Engages in clear, contemplative discussions with Chupei (CW), linking human and LLM focus to dynamical systems; advisor and brainstorming collaborator.</li>
+      </ul>
+      <p class="small" style="margin-top:6px"><a href="group.html">View more</a></p>
+    </details>
+
+    <details style="margin-top:10px">
+      <summary class="small">Why approach LLMs from a cognitive‑science angle?</summary>
+      <p class="small">After earning my undergraduate degree in physics, I spent the past two years self‑studying philosophy of science (admitted but not enrolled to a philosophy program in the University of Bristol). During college, I also took a two‑year gap at the University of Chicago Divinity School to study the philosophy of religion (mainly Eastern). I was interested in how humans think and formulate theories from physics to philosophy. All those experiences inspired me to independently initiate and fund this PI‑for‑LLMs research—recently accepted to the ICML 2025 workshop. This recognition boosted my confidence and made me eager to learn more and to find a lab to continue thinking and observing.</p>
+      <p class="small">I like making cross‑disciplinary comparisons and standing and observing at the intersections between the human and the natural world—from the mind and cognitive mechanisms to physics and algorithms. In particular, I am interested in uncovering where the structural features of knowledge within a field shape both its unique insights and its blind spots. The first cognitive‑with‑LLM project also grew from a gap‑year startup PM experience: with human engineers, spec clarification was natural; with LLMs, conversations felt different—fluent code but gaps in context‑aware reasoning. In Jan 2025 I began probing working memory; a proactive interference (PI) paradigm exposes this bottleneck cleanly.</p>
+    </details>
+
+    <script>
+      (function(){
+        const toggleId = 'lang-toggle';
+        if(!document.getElementById(toggleId)){
+          const btn = document.createElement('button');
+          btn.id = toggleId;
+          btn.textContent = '中文';
+          btn.setAttribute('aria-label','Switch language');
+          btn.style.position='fixed';
+          btn.style.top='12px';
+          btn.style.right='12px';
+          btn.style.padding='8px 10px';
+          btn.style.borderRadius='10px';
+          btn.style.border='1px solid rgba(0,0,0,.12)';
+          btn.style.background='var(--card)';
+          btn.style.cursor='pointer';
+          btn.onclick = function(){
+            const isZh = document.documentElement.getAttribute('data-lang')==='zh';
+            document.documentElement.setAttribute('data-lang', isZh? 'en' : 'zh');
+            btn.textContent = isZh? '中文' : 'EN';
+          };
+          document.body.appendChild(btn);
+        }
+      })();
+    </script>
+  </div>
+</header>
+
+<main class="container">
+  <section id="now" class="section">
+    <h2>Projects</h2>
+    <div class="grid">
+      
+      <article class="card">
+        <h3 style="margin:6px 0 6px 0">Proactive Interference (PI) in LLMs — Cog4LLM</h3>
+        <p class="small">Interference-limited retrieval, measured minimally; simple mind‑flow with optional details.</p>
+        <p class="small">
+          <span class="badge badge-success">ICML 2025 Workshop — Accepted</span>
+          <span class="badge">Ongoing</span>
+          <span class="badge">Boundary cases</span>
+          <span class="badge">Population codes</span>
+        </p>
+        <p>
+          <a class="btn" href="https://sites.google.com/view/cog4llm/" target="_blank" rel="noopener">Open Demo</a>
+          <a class="btn" href="project-pi.html" style="margin-left:6px">Details / Progress</a>
+        </p>
+        <details class="small" style="margin-top:8px">
+          <summary>Contributions (CW / JVS)</summary>
+          <ul class="clean small" style="margin-top:6px">
+            <li><strong>Equal contribution.</strong> Co‑initiated cognitive‑inspired WM stress tests.</li>
+            <li><strong>CW (Chupei Wang):</strong> Framed LLM retrieval errors as interference; led iterative trial‑and‑error testing; designed Experiment 1; pioneered prompt‑hacking interventions.</li>
+            <li><strong>JVS (Jiaqiu Vince Sun):</strong> Implemented/automated pipelines; data/analysis; co‑engineered Experiment 2; expanded to Experiment 3 (value‑length); developed NL interventions and error analyses.</li>
+          </ul>
+          <p class="small">Paper: <a href="https://arxiv.org/abs/2506.08184" target="_blank" rel="noopener">arXiv</a> · Code: <a href="https://github.com/zhuangziGiantfish/Unable-to-Forget" target="_blank" rel="noopener">GitHub</a></p>
+        </details>
+      </article>
+      
+      <article class="card">
+        <h3 style="margin:6px 0 6px 0">Interpretability: Population Codes → Circuits → Boundary Cases</h3>
+        <p>Taking cues from population coding and inhibition/gating motifs in the brain, I use circuit analysis to ask whether similar population-like representations and control signals exist in LLMs—and where they break. Early evidence suggests limits that appear in models but not in human data. I focus on boundary cases: stress tests that expose failure surfaces, then map them back to candidate mechanisms (ranking, selection, inhibition) to turn cognitive hypotheses into falsifiable circuit predictions.</p>
+        <p class="small">
+          <span class="badge">Ongoing</span>
+          <span class="badge">Boundary cases</span>
+          <span class="badge">Circuit analysis</span>
+        </p>
+        <p class="small">Ongoing — progress posted weekly. This week: 2025-08-10.</p>
+        <p><a class="btn" href="project-ranking.html">Open project</a></p>
+      </article>
+      
+      <article class="card">
+        <h3 style="margin:6px 0 6px 0">Creative — Music Supervision (The Three‑Body)</h3>
+        <p class="small">Supervised music for early experimental animation series on Bilibili; coordinated NYU composers; oversaw post‑production.</p>
+        <p class="small">
+          <span class="badge">Music</span>
+          <span class="badge">Animation</span>
+        </p>
+        <p>
+          <a class="btn" href="https://www.bilibili.com/bangumi/play/ep292027/?share_source=copy_web" target="_blank" rel="noopener">Watch clip</a>
+        </p>
+        <details class="small" style="margin-top:8px">
+          <summary>更多 / More</summary>
+          <ul class="clean small">
+            <li>协调纽约大学作曲系成员，完成《三体》第一代实验动画（版权方实验系列）的配乐沟通与监督；系列在 B 站累计播放约 1.2 亿+。</li>
+            <li>自第二季第 3 话起担任音乐监制；示例片段署名约 24:50 处（音乐制作人员名单：监制）。</li>
+            <li>职责：以文字与示例沟通作曲意图与改进意见，统筹后期音乐制作。</li>
+          </ul>
+        </details>
+      </article>
+    
+      
+      <article class="card">
+        <h3 style="margin:6px 0 6px 0">Humanities & Philosophy — Zhuangzi and Tiantai</h3>
+        <p class="small">Seminar work at UChicago Divinity School with Prof. Brook Ziporyn, on classical Chinese (Zhuangzi; Tiantai). Minimal note with reference links.</p>
+        <p class="small"><span class="badge">Humanities</span></p>
+        <p><a class="btn" href="project-humanities.html">Open project</a></p>
+      </article>
+
+    </div>
+  </section>
+
+  <section id="contact" class="section">
+    <h2>Contact</h2>
+    <p class="small">Email: <a href="mailto:cw4bb@virginia.edu">cw4bb@virginia.edu</a></p>
+    <p>
+      <a class="btn" href="cv.pdf">Download CV</a>
+      <!-- Add more links here: GitHub, Google Scholar, LinkedIn -->
+    </p>
+  </section>
+</main>
+
+<footer>
+  <p>© Chupei Wang. Built with a minimal, accessible theme.</p>
+</footer>
+</body>
+</html>

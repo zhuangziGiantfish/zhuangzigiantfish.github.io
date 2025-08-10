@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Proactive Interference in LLMs — Project</title>
+  <meta name="description" content="Measuring and steering proactive interference in large language models.">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<nav aria-label="Primary">
+  <div class="nav-inner">
+    <div class="brand"><a href="index.html">Chupei Wang</a></div>
+    <ul role="list">
+      <li><a href="index.html#now">Back</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main class="container">
+  <header class="section">
+    <h1>Proactive Interference (PI) — Cog4LLM</h1>
+    <p class="small">Minimal read, optional deep‑dive. Interference‑limited retrieval in LLMs.</p>
+    <p><span class="badge badge-success">ICML 2025 Workshop — Accepted</span> <span class="badge">Ongoing</span></p>
+  </header>
+
+  <section class="section">
+    <h2>What does our test reveal?</h2>
+    <p class="small">Classic retrieval tests (Needle‑in‑a‑Haystack; MRCR) add many similar needles. We show the “haystack” isn’t necessary: by isolating and controlling the number of similar needles, we directly measure how interference limits retrieval. Retrieval declines log‑linearly with interference across major transformers.</p>
+    <p class="small"><strong>In short:</strong> a core working‑memory bottleneck from interference, not just context length; a clean way to compare models’ PI susceptibility.</p>
+    <div class="emphasis small" style="margin-top:8px">Why cognitive angle (short): After earning a physics degree, I spent two years self‑studying philosophy of science (admitted but not enrolled at University of Bristol) and took a two‑year gap at UChicago Divinity School (Eastern philosophy of religion). These experiences motivated the PI‑for‑LLMs project (accepted to ICML 2025 workshop).</div>
+  </section>
+
+  <details class="section">
+    <summary class="small">Read more (abstract)</summary>
+    <p class="small">Information retrieval in LLMs intertwines with generation. We adapt proactive interference (PI) from cognitive science: sequentially stream semantically related key‑value updates and query the last value. Accuracy declines log‑linearly toward zero as interference accumulates; prompt‑based mitigation is limited. Findings suggest a working‑memory bottleneck beyond context access.</p>
+  </details>
+
+  <details class="section">
+    <summary class="small">Read more (cognitive science foundation)</summary>
+    <p class="small">PI is a foundational paradigm for human working memory. Repeating cues updated with new values create outdated associations that must be suppressed to report only the latest value. Humans are resilient; LLMs show interference‑driven limits. Porting this paradigm to LLMs makes interference measurable and comparable.</p>
+  </details>
+
+  <!-- Optional figure block can be added later for simplicity -->
+
+  <section class="section">
+    <h2>Links</h2>
+    <ul class="clean small">
+      <li><a href="https://sites.google.com/view/cog4llm/" target="_blank" rel="noopener">Demo (Google Sites)</a></li>
+      <li><a href="https://arxiv.org/abs/2506.08184" target="_blank" rel="noopener">Paper on arXiv</a></li>
+      <li><a href="https://github.com/zhuangziGiantfish/Unable-to-Forget" target="_blank" rel="noopener">Code Repository</a></li>
+    </ul>
+  </section>
+</main>
+
+<footer></footer>
+</body>
+</html>
